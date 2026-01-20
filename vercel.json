@@ -1,9 +1,4 @@
 {
-  "installCommand": "npm run install-back",
-  "buildCommand": "npm run vercel-build",
-  "outputDirectory": "frontend",
-  "routes": [
-    {"src": "/api/(.*)", "dest": "/backend/dist/server.js"},
-    {"src": "/(.*)", "dest": "/frontend/index.html"}
-  ]
+  "framework": null,
+  "outputDirectory": "frontend"
 }
