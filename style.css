@@ -1,0 +1,26 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+.container { max-width: 500px; width: 90%; background: rgba(255,255,255,0.1); backdrop-filter: blur(20px); border-radius: 20px; padding: 2rem; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+header h1 { color: white; text-align: center; margin-bottom: 0.5rem; font-size: 1.8rem; }
+header p { color: rgba(255,255,255,0.8); text-align: center; }
+.input-section { display: flex; gap: 1rem; margin: 2rem 0; }
+#videoUrl { flex: 1; padding: 1rem; border: none; border-radius: 10px; font-size: 1rem; }
+button { padding: 1rem 2rem; border: none; border-radius: 10px; background: #ff6b6b; color: white; font-weight: bold; cursor: pointer; transition: all 0.3s; }
+button:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(255,107,107,0.3); }
+.loader { text-align: center; color: white; font-size: 1.1rem; animation: pulse 1.5s infinite; }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+.hidden { display: none; }
+.error { background: rgba(255,0,0,0.2); color: white; padding: 1rem; border-radius: 10px; text-align: center; margin: 1rem 0; }
+.video-card { background: rgba(255,255,255,0.2); border-radius: 15px; padding: 1.5rem; text-align: center; animation: slideIn 0.5s; }
+@keyframes slideIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+#thumbnail { width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 1rem; }
+.info h3 { color: white; margin-bottom: 0.5rem; }
+.info p { color: rgba(255,255,255,0.7); }
+.downloads { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 1rem; }
+.download-btn { background: linear-gradient(45deg, #00c9ff, #92fe9d); padding: 0.8rem; font-size: 0.9rem; }
+.download-btn.low { background: linear-gradient(45deg, #ff9a9e, #fecfef); }
+.download-btn.medium { background: linear-gradient(45deg, #a8edea, #fed6e3); }
+.download-btn.high { background: linear-gradient(45deg, #ffecd2, #fcb69f); }
+.status-section { margin-top: 1rem; }
+.status-item { background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 10px; margin-bottom: 0.5rem; color: white; }
+@media (max-width: 600px) { .container { padding: 1.5rem; } header h1 { font-size: 1.5rem; } }
