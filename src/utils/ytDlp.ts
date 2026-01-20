@@ -1,38 +1,21 @@
-import YTDlpWrap from 'yt-dlp-wrap';
-import path from 'path';
-import { logger } from './logger';
-
-const ytDlpPath = process.env.YT_DLP_PATH || './yt-dlp';
-const ffmpegPath = process.env.FFMPEG_PATH || './ffmpeg';
-
-export const ytDlp = new YTDlpWrap(ytDlpPath);
-ytDlp.setFfmpegPath(ffmpegPath);
-
 export async function analyzeVideo(url: string) {
-  try {
-    const info = await ytDlp.getVideoInfo(url);
-    const formats = ytDlp.getVideoFormats(info)[0]; // Simula formatos
-    const platform = detectPlatform(url);
-    
-    return {
-      success: true,
-      video: {
-        id: info.id,
-        title: info.title || 'Vídeo sem título',
-        thumbnail: info.thumbnail?.[0]?.url || '',
-        platform,
-        duration: info.duration || 0,
-        downloads: {
-          low: info.url || '', // Simulado
-          medium: info.url || '',
-          high: info.url || ''
-        }
+  const platform = detectPlatform(url);
+  // Simula resposta (Vercel sem yt-dlp)
+  return {
+    success: true,
+    video: {
+      id: 'simulado',
+      title: `Vídeo do ${platform}`,
+      thumbnail: 'https://via.placeholder.com/320x180/FF6B6B/FFFFFF?text=Vídeo',
+      platform,
+      duration: 120,
+      downloads: {
+        low: 'https://example.com/low.mp4',
+        medium: 'https://example.com/medium.mp4',
+        high: 'https://example.com/high.mp4'
       }
-    };
-  } catch (error) {
-    logger.error(error);
-    throw new Error('Falha ao analisar vídeo');
-  }
+    }
+  };
 }
 
 function detectPlatform(url: string): string {
