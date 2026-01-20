@@ -1,25 +1,9 @@
 {
-  "name": "video-downloader-backend",
-  "version": "1.0.0",
+  "name": "video-downloader-full",
+  "private": true,
   "scripts": {
-    "dev": "tsx watch src/server.ts",
-    "build": "tsc",
-    "start": "node dist/server.js",
+    "install-back": "cd backend && npm install",
+    "build": "cd backend && npm run build",
     "vercel-build": "npm run build"
-  },
-  "dependencies": {
-    "fastify": "^5.0.0",
-    "@fastify/rate-limit": "^10.0.0",
-    "@fastify/cors": "^9.0.0",
-    "zod": "^3.23.0",
-    "pino": "^9.0.0",
-    "ioredis": "^5.4.0",
-    "bullmq": "^5.0.0",
-    "yt-dlp-wrap": "^1.2.4"
-  },
-  "devDependencies": {
-    "@types/node": "^22.0.0",
-    "tsx": "^4.7.0",
-    "typescript": "^5.5.0"
   }
 }
