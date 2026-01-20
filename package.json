@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "build": "tsc",
-    "start": "node dist/server.js"
+    "start": "node dist/server.js",
+    "vercel-build": "npm run build"
   },
   "dependencies": {
     "fastify": "^5.0.0",
@@ -14,8 +15,7 @@
     "pino": "^9.0.0",
     "ioredis": "^5.4.0",
     "bullmq": "^5.0.0",
-    "yt-dlp-wrap": "^1.2.4",
-    "node-cron": "^3.0.0"
+    "yt-dlp-wrap": "^1.2.4"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
