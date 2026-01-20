@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VideoDownloader Premium</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎥 VideoDownloader Premium</h1>
+            <p>Baixe vídeos de TikTok, YouTube, Instagram, Facebook e mais</p>
+        </header>
+        <div class="input-section">
+            <input type="url" id="videoUrl" placeholder="Cole o link do vídeo aqui..." required>
+            <button id="analyzeBtn">🔍 Buscar Vídeo</button>
+        </div>
+        <div id="loader" class="loader hidden">Processando...</div>
+        <div id="error" class="error hidden"></div>
+        <div id="videoCard" class="video-card hidden">
+            <img id="thumbnail" src="" alt="Thumbnail">
+            <div class="info">
+                <h3 id="title"></h3>
+                <p id="platform"></p>
+            </div>
+            <div class="downloads">
+                <button class="download-btn low">📱 Baixa Qualidade</button>
+                <button class="download-btn medium">📺 Média Qualidade</button>
+                <button class="download-btn high">🖥️ Alta Qualidade</button>
+            </div>
+        </div>
+        <div id="statusSection" class="status-section hidden"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
