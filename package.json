@@ -1,20 +1,5 @@
 {
-  "name": "video-downloader-backend",
-  "version": "1.0.0",
-  "scripts": {
-    "build": "tsc",
-    "start": "node dist/server.js"
-  },
   "dependencies": {
-    "fastify": "^4.28.1",
-    "@fastify/rate-limit": "^8.3.0",
-    "@fastify/cors": "^8.5.0",
-    "zod": "^3.23.8",
-    "pino": "^8.20.0",
-    "ioredis": "^5.4.1"
-  },
-  "devDependencies": {
-    "@types/node": "^20.11.0",
-    "typescript": "^5.3.3"
+    "fastify": "^4.28.1"
   }
 }
