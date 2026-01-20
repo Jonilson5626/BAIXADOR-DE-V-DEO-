@@ -1,24 +1,9 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "backend/package.json",
-      "use": "@vercel/node"
-    }
-  ],
+  "installCommand": "npm run install-back",
+  "buildCommand": "npm run vercel-build",
+  "outputDirectory": "frontend",
   "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/backend/src/server.ts"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/frontend/index.html"
-    }
-  ],
-  "functions": {
-    "backend/src/server.ts": {
-      "runtime": "nodejs18.x"
-    }
-  }
+    {"src": "/api/(.*)", "dest": "/backend/dist/server.js"},
+    {"src": "/(.*)", "dest": "/frontend/index.html"}
+  ]
 }
